@@ -22,19 +22,17 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 // made this file/component separately
 import "../css/Appbar.css";
 import SearchComp from './SearchComp';
+import { Typography } from "@mui/material";
 
 const drawerWidth = 240;
 
-export default function MyAppbar() {
+export default function Ram() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   
-  const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
-  };
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -155,21 +153,22 @@ export default function MyAppbar() {
        <IconButton
             size="large"
             edge="start"
-            color="inherit"
             aria-label="open drawer"
             sx={{ mr: 2 }}
+            className="muiIcon"
           >
             <MenuIcon />
           </IconButton>
           <Typography
             variant="h6"
             noWrap
+            color="primary"
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
+            className="pr-4"
           >
           MUI
           </Typography>
-          
           <SearchComp />
 
           <Box sx={{ flexGrow: 1 }} />
