@@ -1,0 +1,7 @@
+          <Divider
+            orientation="vertical"
+            variant="middle"
+            style={{ height: "30px" }}
+            flexItem
+            className="m-2"
+          />
