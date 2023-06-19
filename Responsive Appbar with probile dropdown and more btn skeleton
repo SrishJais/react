@@ -25,11 +25,9 @@ import SearchComp from './SearchComp';
 
 const drawerWidth = 240;
 
-export default function MyAppbar({handleDrawerToggleState}) {
+export default function MyAppbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-
-  const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -169,6 +167,8 @@ export default function MyAppbar({handleDrawerToggleState}) {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
+          MUI
+          </Typography>
           
           <SearchComp />
 
