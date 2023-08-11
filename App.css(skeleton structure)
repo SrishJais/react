@@ -35,9 +35,11 @@
   background: #555;
 }
 /* _______________________________________________________________mui icon__________________________________________________________________ */
+/*
 .muiIcon:focus {
   outline: none;
 }
+*/
 .flexSpaceBtw{
   display: flex;
   justify-content: space-between;
