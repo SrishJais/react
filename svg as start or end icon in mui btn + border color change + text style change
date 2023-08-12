@@ -1,0 +1,7 @@
+<Button variant="outlined" startIcon={
+  <IconButton className="muiIcon">
+     <img src={GooglePlayIcon} alt="GooglePlayIcon"/>
+  </IconButton>} 
+  style={{border: "2px solid var(--textColor)"}}>
+     <b className="footerBtnText">GOOGLE PLAY</b>
+</Button>
