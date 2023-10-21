@@ -1,0 +1,30 @@
+import axios from "axios";
+
+
+const fetchData = async () => {
+    const url="https://api.gyanibooks.com/search_publication/";
+    try {
+      //The payload is (an essential part of a REST API) a JS obj which contains the actual data being transferred between the client
+      // and the server 
+      const payload = {
+        keyword: "ai",
+        limit: "10"
+      };
+  
+      //do post req using axios 
+      //in axios , we can send JS obj as it is directly without any conversion
+      // axios fn return response which also remains in JS object(which has data as obj containing arr of obj) so no req to convert
+      const res = await axios.post(url,payload);
+
+      //setSearchResultData(searchResultData);
+      console.log(res.data);
+
+      // console.log(JSON.stringify(res.data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
