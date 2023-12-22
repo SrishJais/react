@@ -1,0 +1,112 @@
+1.Within head for cdn
+
+  <!-- swipper slider cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  2.Within body
+
+   <!----------------- Swiper js slide start------------------------->
+    <div class="swiper mySwiper container py-5 px-3" id="certificateSlider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide certificateItem" style="height: 310px;"> <img src="assets/flipkartGrid4.0.png"  height="100%" width="100%"
+            alt="flipkartGrid4.0 certificate"> </div>
+        <div class="swiper-slide certificateItem" style="height: 310px;"> <img src="assets/flipkartGrid5.0.jpg" height="100%" width="100%"
+            alt="flipkartGrid5.0 certificate"></div>
+        <div class="swiper-slide certificateItem" style="height: 310px;"> <img
+            src="assets/Web Design for Everybody___Basics of Web__Development & Coding (1).png" height="100%" width="100%"
+            alt="Frontend certificate"></div>
+        <div class="swiper-slide certificateItem" style="height: 310px;"> <img src="assets/softskill.png" height="100%" width="100%"
+            alt="softskill certificate"></div>
+        <div class="swiper-slide certificateItem" style="height: 310px;"> <img src="assets/debate.png"  height="100%" width="100%"alt="debate certificate">
+        </div>
+        <div class="swiper-slide certificateItem" style="height: 310px;"> <img src="assets/mercor.png"  height="100%" width="100%"alt="mercor certificate">
+        </div>
+        <div class="swiper-slide certificateItem" style="height: 310px;"> <img src="assets/persistent.png" height="100%" width="100%"
+            alt="persistent certificate"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <!-- extra code for prev,next btn -->
+      <div class="swiper-button-next "></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <!----------------- Swiper js slide end------------------------->
+
+3.Script tag at the end of body
+
+  <!-- for swipper slider start -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- js for Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,//by default 1 item in 1 slide ,i.e, below breakpoint , less tha 768px
+      spaceBetween: 30,
+       // extra for automatic sliding
+      // autoplay: {
+      //   delay: 2000,
+      //   disableOnInteraction: false,
+      // },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // extra for prev , next btn
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      // extra for making responsive
+      breakpoints: {
+        //768 and below 1024 
+        768: {
+          slidesPerView: 2,
+        },
+        //1024 and above
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+  <!-- for swipper slider end -->
+
+4.CSS for swipper slides
+
+/* ____swipper.js ____ */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  height: 100%;
+}
+.certificateItem{
+  border: 3px solid black;
+}
+/*----- next, prev btn styling-------*/
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+  color: rgb(208, 208, 208);
+  font-weight:bolder;
+  width: 50px;
+  border-radius: 50%;
+  opacity: 10;
+}
+.mySwiper [class^="swiper-button-"]::after{
+    font-size: 30px;
+}
+.mySwiper [class^="swiper-button-"]{
+  width: 100px;
+}
+/* --------------------------------swipper end------------------------ */
+    
