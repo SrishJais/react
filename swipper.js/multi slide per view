@@ -33,18 +33,18 @@
 
 3.Script tag at the end of body
 
-  <!-- for swipper slider start -->
+   <!-- for swipper slider start -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- js for Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,//by default 1 item in 1 slide ,i.e, below breakpoint , less tha 768px
       spaceBetween: 30,
-       // extra for automatic sliding
-      // autoplay: {
-      //   delay: 2000,
-      //   disableOnInteraction: false,
-      // },
+      // extra for automatic sliding
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
