@@ -1,13 +1,20 @@
-                <TextField
+                 //without labeled ,without border, background grey filled 
+                 <TextField
+
+                 //to align content vertically center
                   className="py-1"
+
                   // remove bottom border
                   InputProps={{
                     disableUnderline: true,
                   }}
+
                   id="filled-basic"
                   fullWidth
                   autoFocus
                   size="small"
                   placeholder="Enter bus no."
+
+                  //can use other variants also
                   variant="filled"
                 />
