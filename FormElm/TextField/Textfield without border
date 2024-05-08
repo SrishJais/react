@@ -1,9 +1,5 @@
                  //without labeled ,without border, background grey filled 
                  <TextField
-
-                 //to align content vertically center
-                  className="py-1"
-
                   // remove bottom border
                   InputProps={{
                     disableUnderline: true,
