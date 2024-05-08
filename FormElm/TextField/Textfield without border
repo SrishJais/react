@@ -1,0 +1,13 @@
+                <TextField
+                  className="py-1"
+                  // remove bottom border
+                  InputProps={{
+                    disableUnderline: true,
+                  }}
+                  id="filled-basic"
+                  fullWidth
+                  autoFocus
+                  size="small"
+                  placeholder="Enter bus no."
+                  variant="filled"
+                />
