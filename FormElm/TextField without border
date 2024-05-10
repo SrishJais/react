@@ -1,17 +1,31 @@
-                 //without labeled ,without border, background grey filled
-                //Note-Text will be written vertically at bottom
-                 <TextField
-                  // remove bottom border
-                  InputProps={{
-                    disableUnderline: true,
-                  }}
+                  <TextField
+                    // remove bottom border
+                    InputProps={{
+                      disableUnderline: true,
+                    }}
+                    //override default extra padding in textfield
+                    sx={{
+                      "& .MuiInputBase-input": {
+                        paddingTop: "12px",
+                        paddingRight: "12px",
+                        paddingBottom: "12px",
+                        paddingLeft: "12px",
+                      },
+                    }}
+                    //change styling of placeholder in textfield
+                    // inputProps={{
+                    //   sx: {
+                    //     "&::placeholder": {
+                    //       color: "grey",
+                    //     },
+                    //   },
+                    // }}
+                    id="filled-basic"
+                    fullWidth
+                    autoFocus
+                    size="small"
+                    placeholder="Anything..."
+                    //can use other variants also
+                    variant="filled"
+                  />
 
-                  id="filled-basic"
-                  fullWidth
-                  autoFocus
-                  size="small"
-                  placeholder="Enter bus no."
-
-                  //can use other variants also
-                  variant="filled"
-                />
