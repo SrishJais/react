@@ -1,0 +1,30 @@
+                   //________________________________________________________________JS____________________________________________________________________________
+                    const [stateVar, setStateVar] = React.useState("");
+                  
+                    const handleStatusChange = (event) => {
+                      setStateVar(event.target.value);
+                    };
+                  //_________________________________________________________________JSX__________________________________________________________________________
+                  <FormControl fullWidth variant="filled">
+                    <Select
+                      value={stateVar}
+                      onChange={handleStateChange}
+                      //show by default first menu item
+                      displayEmpty
+                      //remove bottom border
+                      disableUnderline
+                      //override extra padding 
+                      sx={{
+                        "& .MuiSelect-select": {
+                          paddingTop: "12px",
+                          paddingRight: "12px",
+                          paddingBottom: "12px",
+                          paddingLeft: "12px",
+                        },
+                      }}
+                    >
+                      <MenuItem value="">Select bus status</MenuItem>
+                      <MenuItem value="Active">Active</MenuItem>
+                      <MenuItem value="Inactive">Inactive</MenuItem>
+                    </Select>
+                  </FormControl>
