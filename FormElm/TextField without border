@@ -3,24 +3,31 @@
                     InputProps={{
                       disableUnderline: true,
                     }}
-                    //override default extra padding in textfield
-                    sx={{
+                  // Override default extra padding in textfield
+                  sx={{
                       "& .MuiInputBase-input": {
                         paddingTop: "12px",
                         paddingRight: "12px",
                         paddingBottom: "12px",
                         paddingLeft: "12px",
                       },
-                    }}
+                    // Override styling bottom border underline for variant="standard"
+                    //"& .MuiInput-underline:before": {
+                    // borderBottom: "3px solid grey",
+                    //},
+                    //"& .MuiInput-underline:after": {
+                    //  borderBottom: "3px solid rgb(18, 185, 182)",
+                    //},
+                  }}
                   //Change styling of textField
                   inputProps={{
                     //style placeholder
-                      sx: {
-                        "&::placeholder": {
-                          color: "grey",
-                          fontWeight:"normal"
-                        },
+                    sx: {
+                      "&::placeholder": {
+                        color: "grey",
+                        fontWeight: "normal",
                       },
+                    },
                     //Style input content
                     style: {
                       color: "rgb(18, 185, 182)",
