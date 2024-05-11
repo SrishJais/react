@@ -12,20 +12,27 @@
                         paddingLeft: "12px",
                       },
                     }}
-                    //change styling of placeholder in textfield
-                    // inputProps={{
-                    //   sx: {
-                    //     "&::placeholder": {
-                    //       color: "grey",
-                    //     },
-                    //   },
-                    // }}
+                  //Change styling of textField
+                  inputProps={{
+                    //style placeholder
+                      sx: {
+                        "&::placeholder": {
+                          color: "grey",
+                          fontWeight:"normal"
+                        },
+                      },
+                    //Style input content
+                    style: {
+                      color: "rgb(18, 185, 182)",
+                      fontWeight: "bold",
+                    },
+                  }}
                     id="filled-basic"
                     fullWidth
                     autoFocus
                     size="small"
                     placeholder="Anything..."
-                    //can use other variants also
+                    //can use other variants also like variant="standard"
                     variant="filled"
                   />
 
