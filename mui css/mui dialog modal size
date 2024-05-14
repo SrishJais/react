@@ -1,0 +1,6 @@
+        <Dialog
+           // maxWidth="sm" ,fullWidth used to change width of dialog modal
+           maxWidth="sm"
+        >
+        </Dialog>
+      
