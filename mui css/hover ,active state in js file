@@ -1,1 +1,16 @@
-vd
+<div sx={{
+{/* css..................  */}
+
+ "&:hover": {
+      background: "#efefef",
+      {/* css..................  */}
+    },
+
+ "&:active": {
+      background: "#efefef",
+      {/* css..................  */}
+    },
+
+}}
+>
+</div>
