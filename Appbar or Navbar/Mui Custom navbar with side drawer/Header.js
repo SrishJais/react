@@ -140,12 +140,17 @@ function ResponsiveAppBar() {
           */}
 
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>
-            <div className="d-flex mx-2">
+            <div className="d-flex mx-2" >
               {menuItems.map((menuElm, index) => (
                 <MenuItem
                   key={index}
-                  className="px-2"
-                  style={{ fontWeight: "bold" }}
+                  className="px-2 py-1"
+                  sx={{ fontWeight: "bold",
+                  "&:hover": {
+                    backgroundColor: "white",
+                    borderRadius:"5px",
+                  },
+                   }}
                 >
                   <NavLink to={menuItemUrl[index]} className="nav-item">
                     {menuElm}
