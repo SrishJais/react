@@ -1,0 +1,13 @@
+{/* ______________________Link btn JSX_____________________  */}
+
+  <Link to="/url" className="link_comp ">
+    <Button id="reqBtn" variant="contained">BUTTON</Button>
+  </Link>
+{/* ______________________App.css_____________________  */}
+/* Link component of router */
+.link_comp {
+  color: rgb(18, 185, 182);
+}
+.link_comp:hover {
+  text-decoration: none;
+}
