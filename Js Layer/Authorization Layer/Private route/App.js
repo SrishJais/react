@@ -15,7 +15,7 @@ function App() {
         {/* ------------------------------------------------------------Visible to all --------------------------------------------------  */}
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        {/* id parameter in url is optional or req */}
+        {/* id parameter in url is req */}
         <Route path="/details/:id" element={<Details/>} />
         {/* ------------------------------------------Visible to authorized person(Private route) ----------------------------------------  */}
         {/* 1. work for both with and without id parameter in url,i.e for add without id,update with id. 
