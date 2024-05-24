@@ -1,0 +1,14 @@
+{/* id can be get from contextApi of data */}
+
+const Fun = () => {
+const id=123;
+
+return (
+  <Link to={`/details/${id}`}>
+    <Button>MORE</Button>
+  </Link>
+
+  );
+};
+
+export default Fun;
