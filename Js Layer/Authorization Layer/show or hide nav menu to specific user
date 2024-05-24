@@ -1,0 +1,19 @@
+//for authentication
+import { useAuth } from "../myFirebase/myAuthFirebase";
+
+const Header = () => {
+ const { currentUser } = useAuth();
+ return (
+    <>
+
+      {/* show and hide nav menu to specific user with specific role */}
+      {currentUser && (
+       <li>nav menu item</li>
+       )}
+
+       
+    </>
+  );
+};
+
+export default Header;
