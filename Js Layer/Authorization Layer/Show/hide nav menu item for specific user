@@ -1,0 +1,40 @@
+const Header = () => {
+
+  //for authentication
+  const { currentUser, myLogout } = useAuth();
+  const navigate = useNavigate();
+  //for logout
+  const handleLogout = async () => {
+    try {
+      await myLogout();
+      //sessionStorage.setItem("tempOppData", JSON.stringify([]));
+      navigate("../home");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+ return (
+    <>
+
+      {/* show and hide nav menu to specific user with specific role */}
+      {currentUser && (
+       <li>nav menu item</li>
+       )}
+       {/*_____________login btn/Profile Avatar(accessible only to logout user) and logout btn(accessible only to current user)___________ */}
+
+       {currentUser ? (
+        {/* profile avatar or login */}
+        <AiOutlineLogout onClick={handleLogout} />
+        ) : (
+        {/* login btn */}
+         <li>
+           <Link to="/login">
+                <Button>LOGIN</Button>
+           </Link>
+         </li>
+        )}
+    </>
+  );
+};
+
+export default Header;
