@@ -1,3 +1,7 @@
+import { NavLink, Link, useNavigate } from "react-router-dom";
+//for authentication
+import { useAuth } from "../myFirebase/myAuthFirebase";
+
 const Header = () => {
 
   //for authentication
