@@ -1,0 +1,25 @@
+#pageNotFound_page {
+  background-color: #f4f5f6;
+  height: 91vh;
+}
+
+#pageNotFound_heading {
+  font-weight: bolder;
+  font-size: 28px;
+  font-size: 100px;
+  background-image: linear-gradient(to right, grey, rgb(18, 185, 182));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#oops_subheading {
+  opacity: 0.6;
+}
+
+/* gotoHome page btn  */
+#gotoHome_btn {
+  font-weight: bold;
+  text-transform: none;
+  background-color: rgb(18, 185, 182);
+}
