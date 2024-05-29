@@ -2,7 +2,8 @@
 import React, { createContext} from "react";
 
 // Create a new context
-export const myContext = createContext();
+//must initialize using "" or [] or null otherwise will give error
+export const myContext = createContext("");
 
 function App() {
 
