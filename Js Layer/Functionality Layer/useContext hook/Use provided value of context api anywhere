@@ -1,0 +1,16 @@
+//import useContext hook
+import React, { useContext } from "react";
+
+const Comp = () => {
+
+  //context api
+  const { state, setState } = useContext(myContext);
+
+  return (
+    <>
+     ......
+    </>
+  );
+};
+
+export default Comp;
