@@ -1,0 +1,24 @@
+//import createContext hook
+import React, { createContext} from "react";
+
+// Create a new context
+export const myContext = createContext();
+
+function App() {
+
+  // Pass value through useContext
+  let [state, setState] = useState([]);
+
+return (
+    <div className="App">
+      <Header />
+
+      <myContext.Provider value={{ state, setState}}>
+        {/* routes  */}
+      </myContext.Provider>
+
+    </div>
+  );
+}
+
+export default App;
