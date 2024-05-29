@@ -12,9 +12,9 @@ function App() {
 
 return (
     <div className="App">
-      <Header />
-
+    {/* wrap only those things within provider in which provided value is req to use */}
       <myContext.Provider value={{ state, setState}}>
+      <Header />
         {/* routes  */}
       </myContext.Provider>
 
