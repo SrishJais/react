@@ -1,3 +1,4 @@
+import { myContext } from "../App";
 //import useContext hook
 import React, { useContext } from "react";
 
