@@ -1,0 +1,15 @@
+1)Map-
+    i) Traverse each arr elm ,do calculation using arr elm(if req) ,return completely new thing(like <>hgghk</>) /modified thing(val*2) 
+    ii) map can be used with condition(if-else/conditional rendering) or without condition
+    iii)map with conditio-
+      if some elm not req to render based on condition then it must return null as an elm of new created array but size of new created array 
+      remains same as the arr whose elm is rendering but size does not get reduced unlike filter function
+
+USE- render each arr elm with/without condition + return completely new thing/modified thing/return null(when some elm not req to render)
+
+2)Filter-
+    i)skip/keep the already existing arr elm in new created arr as it is, based on condition
+    ii)It does not return new thing or modified thing unlike map function but return only already existed elm of arr
+    iii)It may reduce size of arr
+
+USE- only keep req already existing arr elm without any modification or without returning/ storing new elm other than elm of already existed arr
