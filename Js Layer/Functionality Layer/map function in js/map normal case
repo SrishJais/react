@@ -1,1 +1,11 @@
-cxc
+export default function Component() {
+    return (
+      <div>
+        {menuItems.map((menuElm, index) => (
+            <div key={index}>
+                <NavLink to={menuItemUrl[index]} >{menuElm}</NavLink>
+            </div>
+        ))}
+      </div>
+  );
+}
