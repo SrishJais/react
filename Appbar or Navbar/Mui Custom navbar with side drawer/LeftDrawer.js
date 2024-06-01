@@ -17,7 +17,16 @@ import { MdDirectionsBusFilled } from 'react-icons/md';
 import { FcContacts } from 'react-icons/fc';
 import { NavLink } from "react-router-dom";
 
-export default function TemporaryDrawer() {
+//for authentication
+//import { useAuth } from "../myFirebase/myAuthFirebase";
+//for authorization
+//import { userTypeContext } from "../App";
+
+export default function LeftDrawer() {
+    //for authentication
+    //const { currentUser } = useAuth();
+    // for authorization
+    //const { userType } = useContext(userTypeContext);
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -37,24 +46,26 @@ export default function TemporaryDrawer() {
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
         <Typography variant="h6" className="p-3" style={{color:"white",backgroundColor:"rgb(18, 185, 182)",fontWeight:"bold"}}>Browse BusHub</Typography>
-
+  
       <List>
-        {menuItems.map((menuElm, index) => (
-          <ListItem key={index} disablePadding style={{ fontWeight: "bold" }}>
-            <ListItemButton>
-              <ListItemIcon 
-              className="drawerMenuIcon"
-              >
-                {navDrawerMenuItem[index]}
-              </ListItemIcon >
-              <NavLink to={menuItemUrl[index]}
-               className="drawer_nav-item"
-               >
-                    {menuElm}
-                  </NavLink>
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {menuItems.map((menuElm, index) => {
+          // for authorization
+          // if (index === 1) {
+          //   if (!(currentUser && userType === "driver")) return null; // Do not render Businfo if not logged in or user is not a driver
+          // }
+          return (
+            <ListItem key={index} disablePadding style={{ fontWeight: "bold" }}>
+              <ListItemButton>
+                <ListItemIcon className="drawerMenuIcon">
+                  {navDrawerMenuItem[index]}
+                </ListItemIcon>
+                <NavLink to={menuItemUrl[index]} className="drawer_nav-item">
+                  {menuElm}
+                </NavLink>
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
       </List>
     </Box>
   );
