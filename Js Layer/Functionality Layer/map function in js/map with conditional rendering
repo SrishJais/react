@@ -3,7 +3,7 @@
 export default function Component() {
     return (
       <div>
-        {menuItems.map((menuElm, index) => {
+        {array.map((menuElm, index) => {
   
   //return null
           ..... Condition.....
