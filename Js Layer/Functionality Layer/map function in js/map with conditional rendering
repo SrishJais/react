@@ -1,0 +1,24 @@
+//return null or return required elm based on condition
+
+export default function Component() {
+    return (
+      <div>
+        {menuItems.map((menuElm, index) => {
+  
+  //return null
+          ..... Condition.....
+         // if (index === 1) {
+         //    if (!(currentUser && userType === "driver")) 
+         //        return null; 
+         // }
+
+   // return req elm
+          return (
+            <div key={index}>
+                <NavLink to={menuItemUrl[index]} >{menuElm}</NavLink>
+            </div>
+          );
+        })}
+      </div>
+  );
+}
